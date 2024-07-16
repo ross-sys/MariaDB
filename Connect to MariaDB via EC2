@@ -1,0 +1,24 @@
+Connect to MariaDB via EC2
+Create EC2;
+1. Select Region - US West , Select EC2 tab - Launch instance
+2. Name - MariaDb-Connect
+3. AMI image - Amazon Linux EX: ami-0fb83b36371e7dab5 # AMI from US West Region
+4. Key Pair - use existing or create new key pair
+5. Networking - Create or use existing Security Group(SG) (need port - 3306 open in SG)
+6. EC2 can be in public with port 22 open for SSH in SG.
+7. Skip to Summery - Select 1 instance
+8. Launch Instance
+9. Select SSH to connect to instance - ssh -i “user.pem" ec2-user@ec2-54-183-180-67.us-west-1.compute.amazonaws.com
+10. Update EC2 - dnf update -y & dnf install mariadb105 -y
+11. mysql -h “Insert Endpoint”-u admin -p # Insert your endpoint - NO quotes,default is admin for user in this example
+
+Create RDS Standard - MariaDB
+1. Select Region - US West, Create database
+2. Creation method - Standard create
+3. Engine option - MariaDB(keep or select DB version)
+4. Templates - Free tier
+5. Settings - Give DB a name - mydatabase-1
+6. Create master username - admin, password - admin-password
+7. Instance configuration - Burstable
+8. Skip down to Connectivity - Select Connect to an EC2 compute source 9. Enter EC2 name created - MariaDb-Connect
+10. Choose default VPC,No public access 11. Database name - mymariadb1
