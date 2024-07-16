@@ -21,4 +21,5 @@ Create RDS Standard - MariaDB
 6. Create master username - admin, password - admin-password
 7. Instance configuration - Burstable
 8. Skip down to Connectivity - Select Connect to an EC2 compute source 9. Enter EC2 name created - MariaDb-Connect
-10. Choose default VPC,No public access 11. Database name - mymariadb1
+10. Choose default VPC,No public access 
+11. Database name - mymariadb1
