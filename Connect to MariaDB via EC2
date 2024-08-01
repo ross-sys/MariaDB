@@ -5,7 +5,7 @@ Create EC2;
 3. AMI image - Amazon Linux EX: ami-0fb83b36371e7dab5 # AMI from US West Region
 4. Key Pair - use existing or create new key pair
 5. Networking - Create or use existing Security Group(SG) (need port - 3306 open in SG)
-6. EC2 can be in public with port 22 open for SSH in SG.
+6. EC2 shoud be in public subnet with port 22 open for SSH in SG.
 7. Skip to Summery - Select 1 instance
 8. Launch Instance
 9. Select SSH to connect to instance - ssh -i “user.pem" ec2-user@ec2-54-183-180-67.us-west-1.compute.amazonaws.com
